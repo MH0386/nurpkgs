@@ -7,7 +7,9 @@
 # commands such as:
 #     nix-build -A mypackage
 
-{ pkgs ? import <nixpkgs> { } }:
+{
+  pkgs ? import <nixpkgs> { },
+}:
 
 {
   # The `lib`, `overlays`, `nixosModules`, `homeModules`,
@@ -22,7 +24,8 @@
   docker-sandboxes = pkgs.callPackage ./pkgs/docker-sandboxes { };
   multica = pkgs.callPackage ./pkgs/multica { };
   gh-aw = pkgs.callPackage ./pkgs/gh-aw { };
-  
+  composio = pkgs.callPackage ./pkgs/composio { };
+
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
 }

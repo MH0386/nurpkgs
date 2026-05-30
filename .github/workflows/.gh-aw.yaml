@@ -15,13 +15,14 @@ jobs:
   compile:
     name: Compile
     runs-on: ubuntu-latest
+    environment: gh-aw
     steps:
       - name: Checkout repository
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           token: ${{ secrets.GH_TOKEN }}
       - name: Install GH AW CLI
-        uses: github/gh-aw-actions/setup-cli@28ffccfcaa92868c8160807f95519789a590defc # v0.74.0
+        uses: github/gh-aw-actions/setup-cli@b11be78086764c43fa463398aed7ffdcf40549c1 # v0.77.0
       - name: Compile
         run: gh aw compile
       - name: Commit and push changes
@@ -31,4 +32,3 @@ jobs:
           commit_options: --no-verify
           push_options: --force
           file_pattern: .github/
-          

@@ -25,6 +25,8 @@
   multica = pkgs.callPackage ./pkgs/multica { };
   gh-aw = pkgs.callPackage ./pkgs/gh-aw { };
   composio = pkgs.callPackage ./pkgs/composio { };
+  tinyfish = pkgs.callPackage ./pkgs/tinyfish { };
+  ntn = pkgs.callPackage ./pkgs/ntn { };
 
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...

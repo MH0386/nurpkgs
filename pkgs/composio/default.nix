@@ -5,9 +5,7 @@
   fetchPnpmDeps,
   pnpmConfigHook,
   pnpm_10,
-  nodejs,
-  bun,
-  makeWrapper,
+  versionCheckHook,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -90,11 +88,8 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   doInstallCheck = true;
-  installCheckPhase = ''
-    runHook preInstallCheck
-    "$out/bin/composio" --version
-    runHook postInstallCheck
-  '';
+  
+  nativeInstallCheckInputs = [ versionCheckHook ];
 
   meta = {
     description = "CLI for generating and managing Composio integrations";

@@ -24,6 +24,7 @@
   docker-sandboxes = pkgs.callPackage ./pkgs/docker-sandboxes { };
   multica = pkgs.callPackage ./pkgs/multica { };
   gh-aw = pkgs.callPackage ./pkgs/gh-aw { };
+  composio = pkgs.callPackage ./pkgs/composio { };
   tinyfish = pkgs.callPackage ./pkgs/tinyfish { };
   ntn = pkgs.callPackage ./pkgs/ntn { };
 

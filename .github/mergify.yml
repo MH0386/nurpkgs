@@ -1,7 +1,8 @@
+# queue rule 'Nix Flake': `allow_queue_branch_edit` was turned off. It now requires `merge_method: merge-batch` or `merge_method: fast-forward`.
 extends: MH0386
 queue_rules:
   - name: Nix Flake
-    allow_queue_branch_edit: true
+    allow_queue_branch_edit: false
     autoqueue: true
     queue_conditions:
       - author = renovate[bot]
